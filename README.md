@@ -1,16 +1,25 @@
-wk07_prob_below
 
+# Probability of the length<br>길이의 확률
 
-Implement `probability_below()` function.<br>`probability_below()` 함수를 구현하시오
+## Description<br>설명
+* There is a machine cutting a long wire into shorter pieces.<br>철사를 잘게 자르는 기계가 있다.
+* The length of each cut piece `x` would follow a probability distribution whose probability distribution function (PDF) is `f(x)`.<br>자른 철사의 길이는 확률 밀도 함수가 `f(x)`인 확률 분포를 따른다.
+* Using numerical integration, calculate the probability that the length be between `x1` and `x2`.<br>수치 적분을 사용하여 길이가 `x1` 과 `x2` 사이에 있을 확률을 계산하시오.
 
+## Implementation<br>구현
+* Implement `probability_between()` function in `main.py` file.<br>`probability_between()` 함수를 `main.py` 파일에 구현하시오.
+* Arguments are `f` in `function`, `x1` in `float`, and `x2` in `float`.<br>매개변수는 함수 `f`, `float` 형 `x1`, `float` 형 `x2` 이다.
+* Please return the probability that the length be between `x1` and `x2` in `float`.<br>길이가 `x1` 과 `x2` 사이에 있을 확률을 `float` 형으로 반환하시오.
+* You can use `scipy.integrate` for numerical integration.<br>수치 적분을 위해 `scipy.integrate` 를 사용할 수 있다.
+* The function `f()` is the probability distribution function (PDF) of the length of the cut piece.<br>`f()` 함수는 자른 철사의 길이의 확률 분포 함수(PDF)이다.
 
-* Arguments are `data` in `list` and `bound` in `float`.<br>매개변수는 `list` 형 `data` 와 `float` 형 `bound`
-* Calculate probability that random pick from `data` would be smaller than the `bound`.<br>`data` 가운데 임의로 하나를 선택했을 때 `bound` 보다 작을 확률을 계산하시오
+## Example<br>예시
+```python
+import scipy.stats
 
+def f(x, ave=1.0, std=0.1):
+    return scipy.stats.norm.pdf(x, loc=ave, scale=std)
 
-``` python
->>> data = (0, 1, 2, 3, 4)
->>> bound = 1.5
->>> print(probability_below(data, bound))
-0.4
+p = probability_between(f, 0.9, 1.1)
 ```
+* `p` is the probability that the length be between 0.9 and 1.1.<br>`p` 는 길이가 0.9 와 1.1 사이에 있을 확률이다.
