@@ -1,6 +1,6 @@
 import scipy.stats
 
-import main
+import exercise
 
 
 def f(x, ave=1.0, std=0.1):
@@ -11,7 +11,7 @@ def sample_main():
     x1 = 0.9
     x2 = 1.1
 
-    p = main.probability_between(f, 0.9, 1.1)
+    p = exercise.probability_between(f, 0.9, 1.1)
     print(f"probability that x is between {x1} and {x2} will be {p:.4f}")
 
 

@@ -9,7 +9,7 @@
 
 ## Implementation<br>구현
 
-* Implement `probability_between()` function in `main.py` file.<br>`probability_between()` 함수를 `main.py` 파일에 구현하시오.
+* Implement `probability_between()` function in `exercise.py` file.<br>`probability_between()` 함수를 `exercise.py` 파일에 구현하시오.
 * Please see `sample.py` file for an example.<br>사용 예에 대해서는 `sample.py` 파일을 참고하시오.
 * Arguments of function `probability_between()` are `Callable` `f`, `x1` in `float`, and `x2` in `float`.<br>함수 `probability_between()` 의 매개변수는 함수 `f`, `float` 형 `x1`, `float` 형 `x2` 이다.
 

@@ -25,7 +25,7 @@ proj_folder = test_folder.parent.absolute()
 sys.path.insert(0, str(proj_folder))
 
 
-import main
+import exercise
 
 
 random.seed()
@@ -156,7 +156,7 @@ def test_probability_between(p_c_1_2):
     # Calculate expected probability using the CDF
     expected_probability = cdf(x2) - cdf(x1)
 
-    result = main.probability_between(pdf, x1, x2)
+    result = exercise.probability_between(pdf, x1, x2)
 
     # Allow for numerical approximation tolerance
     assert math.isclose(result, expected_probability, rel_tol=0.01), (
